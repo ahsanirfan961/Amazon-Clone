@@ -1,0 +1,38 @@
+.language-settings {
+    margin-top: 2%;
+    margin-inline: 5%;
+}
+
+.language-settings button {
+    border: none;
+    background-color: white;
+    border-radius: 8px;
+    height: 30px;
+    padding-inline: 15px;
+    margin: 10px;
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.518);
+    cursor: pointer;
+}
+
+.language-settings button:hover {
+    opacity: 0.7;
+}
+
+.language-settings-contents label {
+    text-decoration: none;
+    color: black;
+}
+
+.language-settings-contents label:hover {
+    color: orange;
+    text-decoration: underline;
+}
+
+.language-settings * {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.language-settings-contents {
+    margin-left: 1%;
+}

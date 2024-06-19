@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Language & Currency</title>
+    <script src="../scripts/script.js"></script>
+    <script src="../scripts/functions.js"></script>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/language-settings-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+    <div id="header-container"></div>
+    <div class="language-settings">
+        <h3>Language Settings</h3>
+        <div>
+            <p>Select the language you prefer for browsing, shopping, and communications.</p>
+            <div class="language-settings-contents">
+                <div><input type="radio" id="english"> <label for="english">English - EN</label></div>
+                <hr>
+                <div><input type="radio" id="espanol"> <label for="espanol">español - ES</label></div>
+                <div><input type="radio" id="arabic"> <label for="arabic">العربية - AR</label></div>
+                <div><input type="radio" id="he"> <label for="he">עברית - HE</label></div>
+                <div><input type="radio" id="korean"> <label for="korean">한국어 - KO</label></div>
+                <div><input type="radio" id="portugese"> <label for="portugese">português - PT</label></div>
+                <div><input type="radio" id="zh"> <label for="zh">中文 (简体) - ZH</label></div>
+                <hr>
+            </div>
+            <h3>Currency Settings</h3>
+            <div class="language-settings-contents">
+                <p>$ - USD - US Dollar<a href="" style="margin-left: 60px;">Change</a></p>
+            </div>
+            <button onclick="go_to_index()">Cancel</button>
+            <button style="background-color: #FFD814;">Save Changes</button>
+        </div>
+    </div>
+    <footer id="footer-container"></footer>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+* {
+    font-family: Arial;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+}
+
+header button {
+    background-color: transparent;
+    border: none;
+    background-image: url('../assets/img/logo-black.png');
+    width: 120px;
+    height: 60px;
+    background-size: cover;
+    cursor: pointer;
+}
+
+.sign-in-box {
+    margin: 2%;
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    border: 1px solid gray;
+    border-radius: 3%;
+    padding: 2%;
+}
+
+.sign-in-box * {
+    margin-top: 2%;
+    margin-bottom: 2%;
+}

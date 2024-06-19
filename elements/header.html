@@ -1,0 +1,159 @@
+<link rel="stylesheet" href="../styles/header-style.css">
+<link rel="stylesheet" href="../styles/dropdown-box.css">
+<link rel="stylesheet" href="../styles/popup-box.css">
+<script src="../scripts/functions.js"></script>
+<header>
+    <!-- nav bar -->
+    <div class="nav-bar">
+        <!-- amazon logo -->
+        <div class="nav-logo-border border">
+            <div id="nav-logo">
+            </div>
+        </div>
+
+        <!-- location box -->
+        <div class="border location-box" id="location-popup-btn">
+            <p style="font-size: 0.7rem; color: #cccccc; margin-left: 20px;">Deliver to</p>
+            <div style="display: flex;">
+                <i class="fa-solid fa-location-dot"></i>
+                <p style="font-weight: bold; margin-left: 5px;font-size: 0.9rem;">Pakistan</p>
+            </div>
+        </div>
+
+        <!-- search box -->
+        <div style="display: flex;">
+            <!-- all button -->
+            <select class="dd-btn">
+                <option>All</option>
+                <option value="">Clothes</option>
+                <option value="">Electronics</option>
+                <option value="">Accessories</option>
+                <option value="">Food and Items</option>
+            </select>
+            <input type="text" placeholder="Search Items"
+                style="width: 700px;height: 33px;border: 0; padding-left: 10px;">
+            <button class="search-btn">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </div>
+
+        <!-- language selector -->
+        <div class="language-btn-border border">
+            <button class="language-btn" onclick="go_to_language_select()">
+                <p style="font-weight: bold;">🏳️‍🌈EN</p>
+                <i class="fa-solid fa-angle-down" style="margin-top: 3px; margin-left: 3px;"></i>
+            </button>
+            <div class="dropdown" id="language-dropdown">
+                <div class="dropdown-contents">
+                    <div>
+                        <p>Change Language <a href="">Learn more</a></p>
+                        <div><input type="radio" id="english"> <label for="english">English - EN</label></div>
+                        <hr>
+                        <div><input type="radio" id="espanol"> <label for="espanol">español - ES</label></div>
+                        <div><input type="radio" id="arabic"> <label for="arabic">العربية - AR</label></div>
+                        <div><input type="radio" id="he"> <label for="he">עברית - HE</label></div>
+                        <div><input type="radio" id="korean"> <label for="korean">한국어 - KO</label></div>
+                        <div><input type="radio" id="portugese"> <label for="portugese">português - PT</label></div>
+                        <div><input type="radio" id="zh"> <label for="zh">中文 (简体) - ZH</label></div>
+                        <hr>
+                        <p>Change Currency <a href="">Learn more</a></p>
+                        <p>$ - USD - US Dollar<a href="" style="margin-left: 60px;">Change</a></p>
+                    </div>
+                    <a href="" style="align-self: center; text-decoration: none;">Change country/region</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- accounts box -->
+        <div id="accounts-btn" class="border">
+            <p style="font-size: 0.7rem; color: #cccccc; margin-left: 6px;">Hello, sign in</p>
+            <div style="display: flex; cursor: pointer;">
+                <p style="font-weight: bold; margin-left: 5px; font-size: 0.9rem;">Accounts & Lists</p>
+                <i class="fa-solid fa-angle-down" style=" margin-left: 3px;"></i>
+            </div>
+            <div class="dropdown" id="accounts-dropdown" style="margin-left: -20%; width: 35%;">
+                <div class="dropdown-contents" style="align-items: center;">
+                    <button style="background-color: #FFD814; width: 50%;" onclick="go_to_signin()">
+                        Sign in
+                    </button>
+                    <p style="font-size: 0.7rem;">New Customer? <a href="">Create account</a></p>
+                    <hr style="width: 90%; margin-bottom: 0;">
+                    <div class="account-options">
+                        <div style="border-right: 1px solid rgba(63, 63, 63, 0.47);">
+                            <h3>Your Lists</h3>
+                            <a href="">Create a list</a>
+                            <a href="">Find a list or Registry</a>
+                        </div>
+                        <div>
+                            <h3>Your Account</h3>
+                            <a href="">Accounts</a>
+                            <a href="">Orders</a>
+                            <a href="">Recommendations</a>
+                            <a href="">Browsing History</a>
+                            <a href="">Watchlist</a>
+                            <a href="">Video Purchases & Rentals</a>
+                            <a href="">Kindle Unlimited</a>
+                            <a href="">Content & Devices</a>
+                            <a href="">Subscribe & Save Items</a>
+                            <a href="">Memberships & Subscriptions</a>
+                            <a href="">Music Library</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Returns box -->
+        <button class="returns-btn border" onclick="go_to_signin()">
+            <p style="font-size: 0.8rem; color: #cccccc;">Returns</p>
+            <div style="display: flex;">
+                <p style="font-weight: bold; margin-left: 5px; font-size: 0.9rem;">& Orders</p>
+            </div>
+        </button>
+
+        <!-- cart box -->
+        <div class="cart-btn-border border">
+            <div class="cart-btn">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <p id="cart-items">0</p>
+                <p style="font-weight: bold;">Cart</p>
+            </div>
+        </div>
+    </div>
+    <div class="options-bar">
+        <div class="border options-box" style="font-weight: bold;">
+            <i class="fa-solid fa-bars" style="font-size: 1.1rem;"></i>
+            All
+        </div>
+        <p class="options-box border">Today's Deals</p>
+        <p class="options-box border">Customer Service</p>
+        <p class="options-box border">Registry</p>
+        <p class="options-box border">Gift Cards</p>
+        <p class="options-box border">Sell</p>
+    </div>
+</header>
+
+<div id="overlay"></div>
+
+<div id="location-popup">
+    <div class="popup-header">
+        <h3>Choose your location</h3>
+        <button id="popup-close-btn">&times;</button>
+    </div>
+    <div class="popup-contents">
+        <p>
+            Delivery options and delivery speeds may vary for different locations
+        </p>
+        <button style="background-color: #FFD814;" onclick="go_to_signin()">Sign in to see your addresses</button>
+        <p style="align-self: center;">or enter a US zip code</p>
+        <div>
+            <input type="text">
+            <button>Apply</button>
+        </div>
+        <p style="align-self: center;">or</p>
+        <select name="" id="location-selector">
+            <option value="">Pakistan</option>
+        </select>
+        <button id="pop-up-done-btn" style="background-color: #FFD814; width: 100px; margin-top: 10px; ">Done</button>
+    </div>
+</div>
