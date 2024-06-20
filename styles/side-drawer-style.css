@@ -1,0 +1,64 @@
+.side-drawer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: white;
+    border-right: 1px solid gray;
+    width: 0%;
+    visibility: hidden;
+    transition: 100ms ease-in-out;
+}
+
+.side-drawer.active {
+    width: 25%;
+    visibility: visible;
+}
+
+.side-drawer header {
+    background-color: #232F3E;
+    height: 10vh;
+    color: white;
+    display: flex;
+    padding-inline-start: 10%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.side-drawer header button {
+    background-color: transparent;
+    font-size: 4rem;
+    border: none;
+    margin-right: -15%;
+    cursor: pointer;
+}
+
+.side-drawer-section {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid gray;
+    padding-bottom: 2%;
+}
+
+.side-drawer-section h3 {
+    padding-left: 10%;
+    padding-top: 5%;
+    padding-bottom: 2.5%;
+}
+
+.side-drawer-button {
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    border: none;
+    padding-inline: 10%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+
+.side-drawer-button h4 {
+    font-weight: 500;
+}
+
+.side-drawer-button:hover {
+    background-color: rgba(0, 0, 0, 0.062);
+}

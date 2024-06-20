@@ -21,9 +21,18 @@ function loadFooter() {
     });
 }
 
+function loadSideDrawer()
+{
+    return fetch('../elements/side-drawer.html').then(response => response.text()).then(data => {
+        document.getElementById('side-drawer').innerHTML = data;
+    }).catch(error => {
+        console.error("Cannot load: ",error);
+    });
+}
+
 // Load All Dependencies
 function loadDependencies() {
-    return Promise.all([loadHeader(), loadFooter()]);
+    return Promise.all([loadHeader(), loadFooter(), loadSideDrawer()]);
 }
 
 // Go to language select page
@@ -39,6 +48,13 @@ function changeImage(direction) {
         scrollContainer.scrollLeft -= scrollContainer.clientWidth;
 }
 
+function open_side_drawer() {
+    document.getElementById('all-side-drawer').classList.add('active');
+}
+
+function close_side_drawer() {
+    document.getElementById('all-side-drawer').classList.remove('active');
+}
 
 function addListeners() {
 
