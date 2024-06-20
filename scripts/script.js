@@ -5,7 +5,7 @@ loadDependencies().then(() => {
 
 // Load Header 
 function loadHeader() {
-    return fetch('../elements/header.html').then(response => response.text()).then(data => {
+    return fetch('header.html').then(response => response.text()).then(data => {
         document.getElementById('header-container').innerHTML = data;
     }).catch(error => {
         console.error('Error loading: ', error);
@@ -14,7 +14,7 @@ function loadHeader() {
 
 //Load Footer
 function loadFooter() {
-    return fetch('../elements/footer.html').then(response => response.text()).then(data => {
+    return fetch('footer.html').then(response => response.text()).then(data => {
         document.getElementById('footer-container').innerHTML = data;
     }).catch(error => {
         console.error('Error loading: ', error);
@@ -23,7 +23,7 @@ function loadFooter() {
 
 function loadSideDrawer()
 {
-    return fetch('../elements/side-drawer.html').then(response => response.text()).then(data => {
+    return fetch('side-drawer.html').then(response => response.text()).then(data => {
         document.getElementById('side-drawer').innerHTML = data;
     }).catch(error => {
         console.error("Cannot load: ",error);
