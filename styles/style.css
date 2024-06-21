@@ -53,8 +53,28 @@
     flex-wrap: wrap;
 }
 
+@media (max-width: 480px)
+{
+    .box {
+        width: 90%;
+    }
+}
+
+@media (min-width: 480px) and (max-width: 1024px)
+{
+    .box {
+        width: 31%;
+    }
+}
+
+@media (min-width: 1024px)
+{
+    .box {
+        width: 23%;
+    }
+}
+
 .box {
-    width: 23%;
     background-color: white;
     height: 55vh;
     display: flex;
