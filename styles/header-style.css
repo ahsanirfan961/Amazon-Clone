@@ -9,7 +9,8 @@
 
 .nav-bar {
     background-color: #0f1111;
-    height: 60px;
+    width: 100%;
+    height: 10vh;
     color: white;
     display: flex;
     justify-content: space-evenly;
@@ -17,49 +18,96 @@
 }
 
 .nav-logo-border {
-    height: 50px;
-    width: 100px;
+    height: 90%;
+    flex: 0.3;
     display: flex;
-    margin-left: 10px;
+    margin-left: 1%;
     padding: 2px;
     cursor: pointer;
 }
 
 #nav-logo {
     background-image: url('../assets/img/logo.png');
-    height: 30px;
-    width: 100px;
+    height: 5vh;
+    width: 100%;
+    min-width: 120px;
     background-size: cover;
     align-self: center;
-    
+
 }
 
 .location-box {
-    padding: 5px;
+    padding: 1%;
     cursor: pointer;
+    flex: 0.2;
 }
 
 .dd-btn {
     display: flex;
     background-color: #E6E6E6;
     color: black;
-    width: 50px;
-    height: 35px;
+    width: 5%;
+    height: 5vh;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
     border: 0;
     align-items: center;
     cursor: pointer;
+    flex: 1;
+    min-width: 40px;
+}
+
+@media (max-width: 480px)
+{
+    .search {
+        width: 0;
+        visibility: hidden;
+    }
+
+    .returns-btn * {
+        width: 0;
+        visibility: hidden;
+    }
+}
+
+@media (min-width: 480px) and (max-width: 1024px)
+{
+    .search {
+        width: 0;
+        visibility: hidden;
+    }
+}
+
+@media (min-width: 1024px)
+{
+    .search {
+       
+    }
+}
+
+.search {
+    margin-left: 1%;
+    display: flex;
+    height: 5vh;
+    flex: 2;
+}
+
+.search-box {
+    width: 80%;
+    border: 0;
+    padding-left: 10px;
+    flex: 15;
 }
 
 .search-btn {
     background-color: #FEBD69;
     border: 0;
-    height: 35px;
-    width: 35px;
+    height: 5vh;
+    width: 10%;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
     cursor: pointer;
+    flex: 1;
 }
 
 .language-btn-border {
@@ -142,21 +190,24 @@
     cursor: pointer;
 }
 
+
 .options-bar {
     background-color: #232F3E;
-    height: 40px;
+    height: 5vh;
     display: flex;
     align-items: center;
     padding-left: 10px;
     color: white;
-    justify-content:flex-start;
+    overflow-x: scroll;
+    scrollbar-width: none;
 }
 
 .options-box {
-    height: 100%;
-    padding-inline: 5px;
+    text-wrap: nowrap;
+    height: 90%;
+    padding-inline: 1%;
     align-content: center;
     font-size: 0.85rem;
-    cursor:pointer;
+    cursor: pointer;
     font-weight: 500;
 }
