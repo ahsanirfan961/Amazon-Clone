@@ -8,10 +8,17 @@
     visibility: hidden;
     transition: 100ms ease-in-out;
 }
-
+ 
 .side-drawer.active {
     width: 25%;
     visibility: visible;
+}
+
+@media (max-width: 480px)
+{
+    .side-drawer.side-drawer.active {
+        width: 80%;
+    }
 }
 
 .side-drawer header {

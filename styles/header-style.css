@@ -86,6 +86,9 @@
     .nav-logo-border {
         height: 4vh;
     }
+    .cart-btn-border {
+        margin-right: 5%;
+    }
 }
 
 @media (min-width: 480px) and (max-width: 1024px)
